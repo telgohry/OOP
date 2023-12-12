@@ -1,14 +1,21 @@
 /* String Library Project */
 
 #include <iostream>
-#include <string>
-#include "clsString.h"
+#include "clsString.h" // Include the header file with clsString class definition
 
-using namespace std;
+int main() {
+    clsString myString("Hello, this is a sample string!");
 
-int main()
-{
-	clsString str ("Tarek Gohry");
+    // Example usage of clsString methods
+    myString.UpperFirstLetterOfEachWord();
+    std::cout << "Modified String: " << myString.GetValue() << std::endl;
 
-	return 0;
+    int vowelCount = myString.CountVowelsInString();
+    std::cout << "Number of vowels: " << vowelCount << std::endl;
+
+    myString.PrintVowelsInString();
+    
+    // Other operations...
+
+    return 0;
 }
